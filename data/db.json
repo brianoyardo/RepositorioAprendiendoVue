@@ -1,0 +1,7 @@
+{
+    "productos" :[
+        {"id" : 1, "nombre" : "Lapiz", "precio" : 1.50, "stock" : 40, "activo" : 1, "img" : "https://picsum.photos/300/300?random=1", "categoria" : "Material de Escritorio"},
+        {"id" : 2, "nombre" : "Laptop", "precio" : 3330, "stock" : 10, "activo" : 1, "img" : "https://picsum.photos/300/300?random=2", "categoria" : "Material de TI"},
+        {"id" : 3, "nombre" : "Celular", "precio" : 1500, "stock" : 15, "activo" : 1, "img" : "https://picsum.photos/300/300?random=3", "categoria" : "Material de Trabajo"}
+    ]
+}
