@@ -28,13 +28,25 @@
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
 import { store } from "./store"
 const handleSale = () => {
-  console.log(store.count)
+  // console.log(store.count)
+  const data = ref({
+    fecha: new Date().toLocaleString(),
+    detalles: store.count
+  })
+  // console.log(JSON.stringify(data.value));
+  fetch("http://localhost:3000/ventas", {
+    method: "POST", 
+    headers: { 'Content-Type': 'application/json'},
+    body: JSON.stringify(data.value) // En caso de que se haya hecho el data en modo reactivo, se hace un .value para reflejar los datos 
+  })
 }
 const remove = (item) => {
   store.count.splice(store.count.indexOf(item),1)
 }
+
 </script>
 <style>
 
